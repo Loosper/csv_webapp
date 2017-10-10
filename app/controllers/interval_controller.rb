@@ -13,6 +13,6 @@ class IntervalController < ApplicationController
       max ||= total
       max = total if total > max
     end
-    render plain: '%.2f' % max.to_f
+    render plain: '%.2f' % max.to_f.ceil(2)
   end
 end
